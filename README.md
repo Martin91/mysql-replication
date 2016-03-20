@@ -50,9 +50,10 @@ It is strongly recommended to setup these containers ONLY under development, tes
 ### TODO
 More flexible commands based on environment variables, includes:
 
-* refactor based on docker-compose
+* mount file dir as persisted data dir
 * multiple master
 * slave servers count
 * explicitly specify ports binding
 * database users and passwords
+* refactor based on docker-compose
 * etc...
