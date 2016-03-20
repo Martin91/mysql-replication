@@ -12,22 +12,22 @@ Then, you have two different ways to run containers, one is to build the image b
 
 #### Build The Image By Yourself
 1. Pull this repository to one of whatever directory whatever you like:
-```sh
-cd /any/directory/you/want/to/work/on
-git clone git@github.com:Martin91/mysql-replication.git
-```
+  ```sh
+  cd /any/directory/you/want/to/work/on
+  git clone git@github.com:Martin91/mysql-replication.git
+  ```
 
 2. Build the image:
-```sh
-cd mysql-replication
-docker build -t "any-docker-image-name-you-like" .
-```
+  ```sh
+  cd mysql-replication
+  docker build -t "any-docker-image-name-you-like" .
+  ```
 
 3. After waiting a long time to finishing update apt and install mysql automatically, you can setup two containers now:
-```sh
-chmod +x start_servers.sh
-./start_servers.sh
-```
+  ```sh
+  chmod +x start_servers.sh
+  ./start_servers.sh
+  ```
 
 #### Pull From Docker Hub
 ```sh
@@ -48,4 +48,10 @@ mysql -uroot -h{vm's ip address} -P{containers binded port on the vm}
 It is strongly recommended to setup these containers ONLY under development, test or staging evironments. Use it for production environment is VERY DANGEROUS. Instead, if you are looking for a safe and reliable image, you should checkout to MySQL official image: [official: mysql](https://hub.docker.com/_/mysql/).
 
 ### TODO
-1. More flexible commands based on environment variables, includes: multiple master, slave servers count, explicitly specify ports binding, database users and passwords, etc.
+More flexible commands based on environment variables, includes:
+
+* multiple master
+* slave servers count
+* explicitly specify ports binding
+* database users and passwords
+* etc...
