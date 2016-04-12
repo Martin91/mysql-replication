@@ -3,7 +3,7 @@ MAINTAINER Martin Hong "hongzeqin@gmail.com"
 
 RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak
 ADD ./sources.list /etc/apt/sources.list
-RUN apt-get -y update && apt-get install -y mysql-server
+RUN apt-get -y update && apt-get install -y mysql-server-5.6
 
 # Enable remote access (default is localhost only, we change this
 # otherwise our database would not be reachable from outside the container)
