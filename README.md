@@ -29,7 +29,7 @@ Then, you have two different ways to run containers, one is to build the image b
   ./start_servers.sh
   ```
 
-#### Pull From Docker Hub
+#### Pull From Docker Hub (the latest image currently only contains mysql-server-5.5, if you need a newer version 5.6, use the above way insteadly)
 ```sh
 docker pull martin91/mysql_server
 docker run --name=mysql_master -p 3306 -e master_role=true -d martin91/mysql_server
